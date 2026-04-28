@@ -3,15 +3,11 @@
 :root {
   --accent: oklch(60% 0.1 240);
   --dark: oklch(20% 0.05 240);
-  --text: oklch(0 0 0 / 0.9) /* --shadow:  */;
+  --border: oklch(70% 0.02 240);
+  --text: oklch(0 0 0 / 0.9);
+  --text-muted: oklch(0 0 0 / 0.75);
   --bg-main: oklch(95% 0 0);
   --shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  background: linear-gradient(to right, white, black);
-  color: transparent;
-  background-clip: text;
 }
 
 * {
@@ -27,20 +23,34 @@ body {
   color: var(--text);
 }
 
-.container {
-  width: 90%;
-  max-width: 1100px;
+.main-content {
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background: linear-gradient(
+    to bottom right,
+    var(--bg-main) 50%,
+    oklch(from var(--accent) l c h / 0.2)
+  );
+
+  & > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    align-items: center;
+  }
 }
 
-header {
-  background: linear-gradient(
-    135deg,
-    oklch(from var(--accent) calc(l - 0.2) c h),
-    var(--accent)
-  );
-  color: white;
-  padding: 30px 0;
-  text-align: center;
+h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .subtitle {
@@ -61,17 +71,12 @@ nav {
   border: 2px solid oklch(from black l c h / 0.5);
   box-shadow: var(--shadow);
 
-  &:hover {
-    animation: bounce 1s ease 1s infinite;
-  }
-}
+  opacity: 50%;
+  transition: opacity 0.5s ease;
 
-@keyframes bounce {
-  from {
-    transform: translateY(-1rem);
-  }
-  to {
-    transform: translateY(-1rem);
+  &:hover,
+  &[data-active] {
+    opacity: 90%;
   }
 }
 
@@ -81,6 +86,7 @@ nav {
   display: flex;
   column-gap: 1.5rem;
   flex-wrap: wrap;
+  width: max-content;
   justify-content: center;
 }
 
@@ -228,7 +234,8 @@ a:not(.button):hover {
 
 hr {
   border: 0;
-  border-top: 2px solid #d6dee8;
+  border-top: 2px solid var(--border);
+  width: 10rem;
 }
 
 footer {
