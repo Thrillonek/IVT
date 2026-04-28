@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+body {
+    background-color: hsl(0, 0%, 95%);
+    padding: 0;
+    margin: 0;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    /* justify-items: center; */
+    margin-bottom: 1rem;
+}
+
+.home-grid h3 {
+    margin-top: 0;
+}
+
+ol, ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    margin: .5rem 0;
+    font-size: 1.125rem;
+    /* font-weight: 500; */
+}
+
+a, a:visited {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+.important {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.back {
+    position: absolute;
+    top: .5rem;
+    left: 3.5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.back:hover {
+    color: gray;
+}

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studentský portál</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Studentský portál</h1>
+        <p class="subtitle">
+          Užitečné informace, odkazy a přehled školních aktivit
+        </p>
+      </div>
+    </header>
+
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Domů</a></li>
+        <li><a href="info.html">Informace</a></li>
+        <li><a href="#rozvrh">Rozvrh</a></li>
+        <li><a href="https://www.google.com" target="_blank">Google</a></li>
+        <li>
+          <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <section class="hero">
+        <h2>Vítejte na studentském portálu</h2>
+        <p>
+          Tento web slouží jako ukázka jednoduchého více stránkového webu
+          vytvořeného v HTML a CSS. Obsahuje <strong>navigaci</strong>,
+          <em>odkazy</em>, <span class="highlight">tabulku</span>, seznamy,
+          obrázek i stylovaná tlačítka.
+        </p>
+        <a class="button" href="info.html">Zjistit více</a>
+      </section>
+
+      <section class="cards">
+        <article class="card">
+          <h3>O webu</h3>
+          <p>
+            Web je zaměřen na prezentaci školních informací a procvičení
+            základních i pokročilejších HTML tagů.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Proč studovat informatiku?</h3>
+          <p>
+            Informatika rozvíjí logické myšlení, práci s daty a schopnost tvořit
+            moderní digitální obsah.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Užitečné odkazy</h3>
+          <p>
+            Navštivte například
+            <a href="https://developer.mozilla.org/cs/" target="_blank"
+              >MDN Web Docs</a
+            >
+            nebo stránku
+            <a href="https://validator.w3.org/" target="_blank"
+              >HTML validátoru</a
+            >.
+          </p>
+        </article>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Oblíbené školní předměty</h2>
+        <div class="two-columns">
+          <div class="box">
+            <h3>Nečíslovaný seznam</h3>
+            <ul>
+              <li>Matematika</li>
+              <li>Informatika</li>
+              <li>Fyzika</li>
+              <li>Anglický jazyk</li>
+            </ul>
+          </div>
+
+          <div class="box">
+            <h3>Číslovaný seznam</h3>
+            <ol>
+              <li>Přijít včas do školy</li>
+              <li>Připravit si pomůcky</li>
+              <li>Splnit úkoly</li>
+              <li>Odevzdat práci v termínu</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="rozvrh">
+        <h2>Ukázkový rozvrh hodin</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Den</th>
+              <th>1. hodina</th>
+              <th>2. hodina</th>
+              <th>3. hodina</th>
+              <th>4. hodina</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pondělí</td>
+              <td>Matematika</td>
+              <td>Český jazyk</td>
+              <td>Informatika</td>
+              <td>Fyzika</td>
+            </tr>
+            <tr>
+              <td>Úterý</td>
+              <td>Angličtina</td>
+              <td>Dějepis</td>
+              <td>Biologie</td>
+              <td>Tělesná výchova</td>
+            </tr>
+            <tr>
+              <td>Středa</td>
+              <td>Chemie</td>
+              <td>Matematika</td>
+              <td>Zeměpis</td>
+              <td>Informatika</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="image-section">
+        <h2>Školní život</h2>
+        <img
+          src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80"
+          alt="Studenti ve škole"
+        />
+        <p class="center-text">
+          Dobře navržený web má být <strong>přehledný</strong>,
+          <em>čitelný</em> a vizuálně jednotný.
+        </p>
+      </section>
+
+      <section class="contact-box">
+        <h2>Kontakt</h2>
+        <p>Správce webu: <span class="highlight">Jan Novák</span></p>
+        <p>E-mail: <a href="mailto:student@skola.cz">student@skola.cz</a></p>
+        <button type="button">Odeslat dotaz</button>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2026 Studentský portál | Vytvořeno jako vzorové maturitní
+          řešení
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

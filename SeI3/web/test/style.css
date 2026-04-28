@@ -1,0 +1,106 @@
+/* 
+CSS = Cascading Style Sheets
+Používá se pro vzhled stránky
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --bg-main: oklch(95% 0 0);
+  --bg-light: oklch(100% 0 0);
+  --accent: oklch(50% 0.15 240);
+  --dark-accent: oklch(30% 0.075 250);
+
+  font-size: 16px;
+  font-family: "Poppins", sans-serif; /* typ písma */
+}
+
+/* Styl celé stránky */
+body {
+  margin: 0; /* odstraní okraje */
+  background-color: var(--bg-main); /* barva pozadí */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HLAVIČKA */
+header {
+  background-color: oklch(
+    from var(--accent) calc(l - 0.25) calc(c - 0.1) h
+  ); /* tmavé pozadí */
+  color: white; /* barva textu */
+  padding: 1rem; /* vnitřní odsazení */
+  text-align: center; /* zarovnání textu */
+}
+
+/* NAVIGAČNÍ MENU */
+nav {
+  background-color: oklch(from var(--accent) calc(l - 0.3) calc(c - 0.1) h);
+}
+
+nav ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+
+  transition: color 200ms ease;
+
+  &:hover,
+  &[data-active] {
+    color: oklch(from white calc(l - 0.1) 0.15 240);
+  }
+}
+
+main {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+section {
+  background: var(--bg-light);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 1rem oklch(from black l c h / 0.1);
+  transition: box-shadow 200ms ease;
+}
+
+section:hover {
+  box-shadow: 0 5px 2rem oklch(from black l c h / 0.2);
+}
+
+.tlacitko {
+  all: unset;
+  display: block;
+  width: fit-content;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 200ms ease;
+}
+
+.tlacitko:hover {
+  background-color: oklch(from var(--accent) calc(l - 0.1) c h);
+}
+
+footer {
+  background-color: var(--dark-accent);
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+}
