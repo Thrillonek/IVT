@@ -1,0 +1,57 @@
+:root {
+  --accent: oklch(60% 0.1 240);
+  --dark: oklch(20% 0.05 240);
+  --border: oklch(80% 0.02 240);
+  --text: oklch(0 0 0 / 0.9);
+  --text-muted: oklch(0 0 0 / 0.75);
+  --bg-main: oklch(95% 0 0);
+  --bg-light: oklch(100% 0 0);
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  background-color: var(--bg-main);
+  line-height: 1.5;
+  color: var(--text);
+}
+
+section {
+  padding: 2rem min(5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--text);
+}
+h2 {
+  font-size: 2.25rem;
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--text);
+}
+p {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+ol,
+ul {
+  padding-left: 1rem;
+}
