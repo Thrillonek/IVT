@@ -7,6 +7,7 @@
 	--text: oklch(0 0 0 / 0.9);
 	--text-muted: oklch(0 0 0 / 0.75);
 	--bg-main: oklch(95% 0 0);
+	--bg-light: oklch(100% 0 0);
 	--shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -24,7 +25,9 @@ body {
 }
 
 section {
-	padding: 2rem 0;
+	padding: 2rem min(5vw, 3rem);
+	display: flex;
+	flex-direction: column;
 }
 
 .main-content {
@@ -48,10 +51,31 @@ section {
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 4rem;
 	line-height: 1.1;
 	font-weight: 600;
 	color: var(--text);
+}
+h2 {
+	font-size: 2.25rem;
+	line-height: 1.1;
+	font-weight: 600;
+	color: var(--text);
+	text-align: center;
+}
+h3 {
+	font-size: 1.5rem;
+	line-height: 1.2;
+	font-weight: 600;
+	color: var(--text);
+}
+p {
+	font-size: 1rem;
+	color: var(--text-muted);
+}
+ol,
+ul {
+	padding-left: 1rem;
 }
 
 .subtitle {
@@ -116,33 +140,36 @@ main {
 	color: #2c3e50;
 }
 
-.cards {
+.my-flex {
 	display: flex;
-	gap: 20px;
+	flex-direction: row;
+	gap: 1rem;
 	flex-wrap: wrap;
+}
+
+.layout-col {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+
+	&.center-content {
+		align-items: center;
+	}
 }
 
 .card {
-	flex: 1 1 300px;
-	background-color: white;
-	padding: 20px;
-	border-left: 6px solid #4a6fa5;
-	border-radius: 10px;
-	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
-}
-
-.two-columns {
 	display: flex;
-	gap: 20px;
-	flex-wrap: wrap;
-}
+	flex-direction: column;
+	row-gap: 0.5rem;
 
-.box {
-	flex: 1 1 400px;
-	background-color: white;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+	padding: 1rem;
+	border-radius: 0.5rem;
+	background-color: var(--bg-light);
+	box-shadow: var(--shadow);
+
+	&:not(.fit-content) {
+		flex: 1;
+	}
 }
 
 table {

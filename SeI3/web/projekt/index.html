@@ -5,12 +5,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Studentský portál</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js"></script>
 </head>
 
 <body>
+  <script>
+    tailwind.config = {
+      corePlugins: {
+        preflight: false,
+      },
+    }
+  </script>
+
   <header>
     <nav>
       <ul class="nav">
@@ -43,7 +51,7 @@
       <a class="button" href="info.html">Zjistit více</a>
     </section>
 
-    <section class="cards">
+    <section class="my-flex">
       <article class="card">
         <h3>O webu</h3>
         <p>
@@ -71,23 +79,21 @@
       </article>
     </section>
 
-    <hr />
-
-    <section>
-      <h2>Oblíbené školní předměty</h2>
-      <div class="two-columns">
-        <div class="box">
-          <h3>Nečíslovaný seznam</h3>
+    <section class="layout-col center-content">
+      <h2>Seznamy</h2>
+      <div class="my-flex">
+        <div class="card fit-content">
+          <h3>Oblíbené předměty</h3>
           <ul>
-            <li>Matematika</li>
             <li>Informatika</li>
+            <li>Matematika</li>
             <li>Fyzika</li>
             <li>Anglický jazyk</li>
           </ul>
         </div>
 
-        <div class="box">
-          <h3>Číslovaný seznam</h3>
+        <div class="card fit-content">
+          <h3>Denní rutina</h3>
           <ol>
             <li>Přijít včas do školy</li>
             <li>Připravit si pomůcky</li>
@@ -98,7 +104,7 @@
       </div>
     </section>
 
-    <section id="rozvrh">
+    <section class="layout-col">
       <h2>Ukázkový rozvrh hodin</h2>
       <table>
         <thead>
@@ -136,7 +142,7 @@
       </table>
     </section>
 
-    <section class="image-section">
+    <section class="image-section layout-col">
       <h2>Školní život</h2>
       <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80"
         alt="Studenti ve škole" />
