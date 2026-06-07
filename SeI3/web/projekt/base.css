@@ -54,8 +54,37 @@ p {
 	color: var(--text-muted);
 }
 
+ul,
 ol {
 	list-style: none;
+}
+
+ul {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+
+	& > li {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		& > div:has(svg) {
+			background-color: var(--accent-muted);
+			display: grid;
+			place-items: center;
+			width: 1.5rem;
+			aspect-ratio: 1 / 1;
+			border-radius: 0.25rem;
+			position: relative;
+
+			& > svg {
+				position: absolute;
+			}
+		}
+	}
+}
+
+ol {
 	counter-reset: ol-counter;
 	display: flex;
 	flex-direction: column;

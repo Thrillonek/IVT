@@ -51,6 +51,7 @@ nav {
 	display: flex;
 	column-gap: 1.5rem;
 	flex-wrap: wrap;
+	flex-direction: row !important;
 	justify-content: center;
 
 	& a {
