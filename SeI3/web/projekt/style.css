@@ -1,271 +1,260 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import "base.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'base.css';
 
 .main-content {
-  padding: 10rem 0;
-  display: flex;
-  flex-direction: column;
-  row-gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+	padding-top: 8rem;
+	display: flex;
+	flex-direction: column;
+	row-gap: 2rem;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 
-  background: linear-gradient(
-    to bottom right,
-    var(--bg-main) 50%,
-    oklch(from var(--accent) l c h / 0.2)
-  );
-  box-shadow: var(--shadow);
-
-  & > div:first-of-type {
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.5rem;
-    align-items: center;
-  }
+	& > div:first-of-type {
+		display: flex;
+		flex-direction: column;
+		row-gap: 0.5rem;
+		align-items: center;
+	}
 }
 
 .subtitle {
-  font-size: 1.1rem;
+	font-size: 1.1rem;
 }
 
 header {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 nav {
-  background: linear-gradient(
-    to right,
-    var(--dark) 50%,
-    oklch(from var(--dark) calc(l + 0.05) 0.1 h)
-  );
-  position: fixed;
-  top: 1rem;
-  border-radius: 500rem;
-  overflow: hidden;
-  border: 2px solid oklch(from black l c h / 0.5);
-  box-shadow: var(--shadow);
+	background: linear-gradient(to right, var(--dark) 50%, oklch(from var(--dark) calc(l + 0.05) 0.1 h));
+	position: fixed;
+	top: 1rem;
+	border-radius: 500rem;
+	overflow: hidden;
+	border: 2px solid oklch(from black l c h / 0.5);
+	box-shadow: var(--shadow);
 
-  opacity: 50%;
-  transition: opacity 0.5s ease;
+	opacity: 50%;
+	transition: opacity 0.5s ease;
 
-  &:hover,
-  &[data-active] {
-    opacity: 90%;
-  }
+	&:hover,
+	&[data-active] {
+		opacity: 90%;
+	}
 }
 
 .nav {
-  padding: 0.75rem 1.5rem;
-  list-style: none;
-  display: flex;
-  column-gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
+	padding: 0.75rem 1.5rem;
+	list-style: none;
+	display: flex;
+	column-gap: 1.5rem;
+	flex-wrap: wrap;
+	justify-content: center;
 
-  & a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    transition: color 200ms;
+	& a {
+		display: block;
+		color: white;
+		text-decoration: none;
+		transition: color 200ms;
 
-    &:hover {
-      color: oklch(from var(--accent) 95% 0.2 h);
-      text-decoration: none !important;
-    }
-  }
+		&:hover {
+			color: oklch(from var(--accent) 95% 0.2 h);
+			text-decoration: none !important;
+		}
+	}
 }
 
 main {
-  padding: 30px 0;
+	padding: 30px 0;
 }
 
 .hero {
-  background-color: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.05),
-    0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
+	background-color: white;
+	padding: 25px;
+	border-radius: 12px;
+	box-shadow:
+		0 2px 4px rgba(0, 0, 0, 0.05),
+		0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: left;
 }
 
 .hero h2 {
-  color: #2c3e50;
+	color: #2c3e50;
 }
 
 .my-flex {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	flex-wrap: wrap;
 }
 
 .layout-col {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
 
-  &.center-content {
-    align-items: center;
-  }
+	&.center-content {
+		align-items: center;
+	}
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5rem;
 
-  padding: 1rem;
-  border-radius: 0.5rem;
-  background-color: var(--bg-light);
-  box-shadow: var(--shadow);
+	padding: 1rem;
+	border-radius: 0.5rem;
+	background-color: var(--bg-light);
+	box-shadow: var(--shadow);
 
-  &:not(.fit-content) {
-    flex: 1;
-  }
+	&:not(.fit-content) {
+		flex: 1;
+	}
 }
 
 .time-table {
-  display: grid;
-  grid-template-columns: 5rem repeat(4, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  gap: 0.5rem;
-  max-width: 800px;
-  width: 100%;
+	display: grid;
+	grid-template-columns: 5rem repeat(4, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	gap: 0.5rem;
+	max-width: 800px;
+	width: 100%;
 
-  & p {
-    font-weight: 500;
-  }
+	& p {
+		font-weight: 500;
+	}
 
-  & > div:not(:first-of-type) {
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow);
-    padding: 0.5rem;
-    display: grid;
-    place-items: center;
-    background-color: var(--bg-light);
-    gap: 0.5rem;
+	& > div:not(:first-of-type) {
+		border-radius: 0.5rem;
+		box-shadow: var(--shadow);
+		padding: 0.5rem;
+		display: grid;
+		place-items: center;
+		background-color: var(--bg-light);
+		gap: 0.5rem;
 
-    & > p {
-      cursor: default;
-      width: 100%;
-      height: 100%;
-      border-radius: 0.25rem;
+		& > p {
+			cursor: default;
+			width: 100%;
+			height: 100%;
+			border-radius: 0.25rem;
 
-      display: grid;
-      place-content: center;
-    }
-  }
+			display: grid;
+			place-content: center;
+		}
+	}
 
-  & > div:nth-child(2) {
-    grid-column: 2 / 6;
-    grid-auto-flow: column;
-  }
+	& > div:nth-child(2) {
+		grid-column: 2 / 6;
+		grid-auto-flow: column;
+	}
 
-  & > div:nth-child(3) {
-    grid-row: 2 / 7;
+	& > div:nth-child(3) {
+		grid-row: 2 / 7;
 
-    & > p[data-active] {
-      background-color: var(--accent);
-      color: var(--bg-light);
-    }
-  }
+		& > p[data-active] {
+			background-color: var(--accent);
+			color: var(--bg-light);
+		}
+	}
 
-  & > div:nth-child(4) {
-    grid-row: 2 / 7;
-    grid-column: 2 / 6;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+	& > div:nth-child(4) {
+		grid-row: 2 / 7;
+		grid-column: 2 / 6;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(5, 1fr);
 
-    & > p {
-      transition: all 200ms ease;
+		& > p {
+			transition: all 200ms ease;
 
-      &:hover {
-        background-color: var(--accent);
-        color: var(--bg-light);
-      }
-    }
-  }
+			&:hover {
+				background-color: var(--accent);
+				color: var(--bg-light);
+			}
+		}
+	}
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: var(--bg-light);
+	width: 100%;
+	border-collapse: collapse;
+	background-color: var(--bg-light);
 }
 
 th,
 td {
-  border: 1px solid var(--border);
-  padding: 12px;
-  text-align: center;
+	border: 1px solid var(--border);
+	padding: 12px;
+	text-align: center;
 }
 
 th {
-  background-color: #4a6fa5;
-  color: white;
+	background-color: #4a6fa5;
+	color: white;
 }
 
 tr:nth-child(even) {
-  background-color: #f0f4f8;
+	background-color: #f0f4f8;
 }
 
 .image-section img {
-  width: 100%;
-  border-radius: 0.5rem;
+	width: 100%;
+	border-radius: 0.5rem;
 }
 
 .contact-box {
-  background-color: #eaf2fb;
-  padding: 25px;
-  border: 2px solid #b7cee8;
-  border-radius: 12px;
-  text-align: left;
+	background-color: #eaf2fb;
+	padding: 25px;
+	border: 2px solid #b7cee8;
+	border-radius: 12px;
+	text-align: left;
 }
 
 .highlight {
-  color: #1d5fa7;
-  font-weight: bold;
+	color: #1d5fa7;
+	font-weight: bold;
 }
 
 .center-text {
-  text-align: center;
+	text-align: center;
 }
 
 .button,
 button {
-  background-color: var(--accent);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  transition: background-color 0.3s;
-  text-decoration: none;
-  font-weight: 500;
+	background-color: var(--accent);
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 1rem;
+	transition: background-color 0.3s;
+	text-decoration: none;
+	font-weight: 500;
 
-  &:hover {
-    background-color: oklch(from var(--accent) calc(l - 0.1) c h);
-  }
+	&:hover {
+		background-color: oklch(from var(--accent) calc(l - 0.1) c h);
+	}
 }
 
 a {
-  color: #1d5fa7;
+	color: #1d5fa7;
 }
 
 a:not(.button):hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 hr {
-  border: 0;
-  border-top: 2px solid var(--border);
-  width: 10rem;
+	border: 0;
+	border-top: 2px solid var(--border);
+	width: 10rem;
 }
 
 footer {
-  background-color: #1f2a36;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
+	background-color: #1f2a36;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
 }
