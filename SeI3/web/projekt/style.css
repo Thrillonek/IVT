@@ -180,48 +180,9 @@ main {
 	}
 }
 
-table {
-	width: 100%;
-	border-collapse: collapse;
-	background-color: var(--bg-light);
-}
-
-th,
-td {
-	border: 1px solid var(--border);
-	padding: 12px;
-	text-align: center;
-}
-
-th {
-	background-color: #4a6fa5;
-	color: white;
-}
-
-tr:nth-child(even) {
-	background-color: #f0f4f8;
-}
-
-.image-section img {
-	width: 100%;
-	border-radius: 0.5rem;
-}
-
-.contact-box {
-	background-color: #eaf2fb;
-	padding: 25px;
-	border: 2px solid #b7cee8;
-	border-radius: 12px;
-	text-align: left;
-}
-
 .highlight {
-	color: #1d5fa7;
+	color: var(--accent);
 	font-weight: bold;
-}
-
-.center-text {
-	text-align: center;
 }
 
 .button,
@@ -233,6 +194,7 @@ button {
 	transition: background-color 0.3s;
 	text-decoration: none;
 	font-weight: 500;
+	cursor: pointer;
 
 	&:hover {
 		background-color: oklch(from var(--accent) calc(l - 0.1) c h);
