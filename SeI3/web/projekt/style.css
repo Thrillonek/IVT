@@ -30,6 +30,14 @@ header {
 	box-shadow: var(--shadow);
 }
 
+nav[data-active] {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	box-shadow: var(--shadow);
+	border-radius: 0.5rem;
+}
+
 nav > ul {
 	list-style: none;
 	display: flex;
