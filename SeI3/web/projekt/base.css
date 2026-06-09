@@ -26,18 +26,18 @@ body {
 
 section,
 footer {
-	padding: 4rem max(5vw, 10rem);
+	padding: 4rem max(5vw, calc(100vw - 1500px));
 	display: flex;
 	flex-direction: column;
 }
 
-h1,
+/* h1,
 h2,
 h3 {
 	--margin: 1em;
 	margin-top: var(--margin);
 	margin-bottom: calc(var(--margin) / 2);
-}
+} */
 
 h1 {
 	font-size: 4rem;
@@ -121,5 +121,5 @@ ol {
 }
 
 img {
-	max-width: 64rem;
+	max-width: min(64rem, 100%);
 }
