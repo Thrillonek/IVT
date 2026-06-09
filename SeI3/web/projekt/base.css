@@ -24,10 +24,19 @@ body {
 	color: var(--text);
 }
 
-section {
+section,
+footer {
 	padding: 4rem max(5vw, 10rem);
 	display: flex;
 	flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+	--margin: 1em;
+	margin-top: var(--margin);
+	margin-bottom: calc(var(--margin) / 2);
 }
 
 h1 {

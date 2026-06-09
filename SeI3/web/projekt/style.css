@@ -36,6 +36,7 @@ nav[data-active] {
 	right: 1rem;
 	box-shadow: var(--shadow);
 	border-radius: 0.5rem;
+	background-color: var(--bg-main);
 }
 
 nav > ul {
@@ -209,8 +210,7 @@ hr {
 }
 
 footer {
-	background-color: #1f2a36;
-	color: white;
 	text-align: center;
-	padding: 20px 0;
+	border-top: 1px solid var(--border);
+	box-shadow: 0 0 1rem -2px oklch(from black l c h / 0.1);
 }
