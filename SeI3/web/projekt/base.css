@@ -17,6 +17,10 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Poppins';
 	background-color: var(--bg-main);
@@ -35,14 +39,6 @@ footer {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
-
-/* h1,
-h2,
-h3 {
-	--margin: 1em;
-	margin-top: var(--margin);
-	margin-bottom: calc(var(--margin) / 2);
-} */
 
 h1 {
 	font-size: 4rem;

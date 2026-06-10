@@ -30,13 +30,17 @@ header {
 	box-shadow: var(--shadow);
 }
 
-@media (width <= 32rem) {
+@media (width <= 40rem) {
 	header {
 		flex-direction: column;
 	}
+
+	nav:not([data-visible]) {
+		display: none;
+	}
 }
 
-@media not all and (width <= 32rem) {
+@media not all and (width <= 40rem) {
 	nav > ul {
 		flex-direction: row !important;
 	}
@@ -190,8 +194,7 @@ nav > ul {
 	font-weight: bold;
 }
 
-.button,
-button {
+.button {
 	background-color: var(--accent);
 	color: white;
 	padding: 0.5rem 1rem;
